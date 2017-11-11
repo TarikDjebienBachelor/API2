@@ -1,0 +1,13 @@
+
+
+Question 1.
+
+(|n|base b) = (ln b')/(ln b) x (|n| base b')
+
+voir question1.jpg + question1_suite.jpg pour la preuve.
+
+Question 2.
+
+b = 10⁴
+
+voir question2.jpg

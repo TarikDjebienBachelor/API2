@@ -1,0 +1,30 @@
+   // insererDansLeTri(e,l) = modifie la liste l en insérant l’élément
+   // e au premier rang où e ne dépasse pas l’élément suivant
+   // si l est triée avant, l est encore triée après
+   // CU : e est une liste à un seul élément
+   procedure insererDansLeTri(const e: LISTE ; var L: LISTE );
+   var k,i : INTEGER;
+   begin
+       //Initialisation
+       k := 0;   
+       // Recherche du rang k en parcourant la liste L 
+       for i:= 1 to longueur(L) do 
+       begin
+          if inferieur(elementRang(k,L),tete(e)) then
+          k := k + 1;
+       end;
+       // Insertion de la liste e au rang k obtenu précédemment dans L
+       // on distingue 3 cas :
+       if (k = 0) then 
+       L := ajouteEnTete(tete(e),L);
+       
+       if (k = longueur(L)-1) then
+       begin
+       ajouteEnFin(tete(e),L);
+       // et la on a une copie de e 2 fois a la fin de L ????....je ne compren pas
+       // merci pour l'explication.
+       end;
+       
+       if (k > 0) AND (k < longueur(L)-1) then
+       inserer(tete(e),L,k); 
+   end{insere};

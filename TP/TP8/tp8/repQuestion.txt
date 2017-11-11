@@ -1,0 +1,62 @@
+//RAKOTOBE Sitraka Eric
+//REPONSE QUESTION SUR ARBRES1
+
+
+
+
+Question 1:«A la main» les nombres d’arbres binaires de taille comprise entre 0 et 4 est de 13  
+Taille0		taille1		taille2		taille3		taille4
+1 arbre         2 arbres	3 arbres	3arbres		4arbres
+
+*********************************************************************************************************************
+Question 2. Considérons un arbre binaire A de taille n=5. 
+
+Q 2–1       Son sous-arbre gauche pe de taille : 4 3 2 1 0 
+Auquel cas son sous-arbre droit sera de taille : 0 1 2 3 4 
+
+Q 2–2 Si k désigne la taille du sous-arbre gauche de A, la taille de sous-arbre droit est 5-k soit generalement
+on a :taille sous arbre (droite) = taille(arbre) -1 - taille sous arbre (gauche) <=> nd=n-1-k
+
+Q 2–3. Combien y a-t-il d’arbres de taille 5 dont le sous-arbre gauche
+
+   1. est vide :14
+   2. est de taille 1 :5
+   3. est de taille 2 :4
+   4. est de taille 3 :5
+   5. est de taille 4 :14
+
+Q 2–4. le nombre c(5) est c(5)=14+5+4+5+14 = 42 
+
+************************************************************************************************************************
+
+Question 3:         n-1
+             c(n) = ∑     c(n-1-k)*c(k)      = somme de k=0 a n-1 de c(n-1-k)*c(k)
+		    k=0
+
+
+*********************************************************************************************************************
+
+Question 4:/ Pour n compris entre 1 et 4 la formule de recurrence est verifie
+n=1
+c(0)=1;
+c(1)=1;
+c(2)=c(1)*c(0)+c(0)*c(1)=1*1+1*1=2;
+c(3)=c(2)*c(0) + c(1)*c(1) + c(0)*c(2)=2*1+1*1+1*2=5;
+c(4)= c(3)*c(0) + c(2)*c(1) + c(1)*c(2) + c(0)*c(3) =5*1+2*1+2*1+5*1=14;
+
+*********************************************************************************************************************
+
+
+La programmation récursive du calcul des nombres cn est très inefficace parce qu’elle répète inutilement des calculs.
+
+Question 8. Pour le calcul de c4, le calcul de c3 est effectué 2 fois, celui de c2 : 2 fois, celui de c1: 2fois et celui de c0: 2fois donc beaucoup trop de calculs 
+
+*********************************************************************************************************************
+
+Question 11.Le calcul de c19 est maintenant beaucoup plus rapide  
+
+Question 12.Cependant, on a deux boucles FOR inmbriquees donc une complexite en n²
+
+Question 14.Les valeurs ne sont pas tout a fait fiables car les nombres sont tres elevees et on a des valeurs a virgules parfois, or en les exprimant sous forme de cardinal, on obtient des approximations
+
+
